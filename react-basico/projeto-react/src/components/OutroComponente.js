@@ -9,6 +9,7 @@ const OutroComponente = () => {
         <button onClick={handleClick}>Evento click</button>
         <hr/>
         <button onClick={() => console.log('Direto no elemento')}>Evento no elemento</button>
+        <hr/>
     </div>
     );
 };
