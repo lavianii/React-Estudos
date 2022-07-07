@@ -5,7 +5,7 @@ import OutroComponente from './components/OutroComponente';
 import PrimeiroComponente from './components/PrimeiroComponente';
 import Lista from './components/Lista';
 import RenderCondi from './components/RenderCondi';
-
+import Fragmento from './components/Fragmento';
 
 function App() {
   return (
@@ -17,6 +17,7 @@ function App() {
       <Hooks />
       <Lista />
       <RenderCondi x={5}/>
+      <Fragmento />
     </div>
   );
 }
