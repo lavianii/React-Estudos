@@ -1,13 +1,15 @@
 import { useState } from "react";
 
 function App() {
+  //criando um estado para cada input
   const [nome, setNome] = useState("");
   const [email, setEmail] = useState("");
   const [idade, setIdade] = useState(0);
 
-  //criado um objeto para 
+  //criado um objeto
   const [user, setUser] = useState({})
 
+  //criando uma funcao para atualizar o estado do formulario
   function mudaRegistro(e){
     e.preventDefault();
     alert("Registrado com sucesso!");
