@@ -1,6 +1,6 @@
 import Filho from "./Filho"
 
-export default function Pai(props){
+export default function Pai(){
 
   function falarComigo(param1,param2,param3){
     console.log(param1)
@@ -11,7 +11,7 @@ export default function Pai(props){
 
   return(
     <div>
-      <Filho  funcao={falarComigo}/>
+      <Filho funcao={falarComigo}/>
     </div>
   )
 }

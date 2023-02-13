@@ -1,34 +1,42 @@
-import { useState } from "react"
 import Circulo from "../../components/Circulo"
+import styles from "../../styles/MegaSena.module.css"
+
+import { useEffect, useState } from "react"
+import { mega } from "../../functions/mega"
 
 export default function megaSena() {
-  const estilo = {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    flexDirection: "column",
-    height:"90vh",
-    gap: "20px"
-  }
+  const [qtd, setQtd] = useState(6);
+  const [numeros, setNumeros] = useState([]);
 
-  const [valor, setValor] = useState(0)
-  const [sortear, setSortear] = useState(0)
+  useEffect(() => {
+    setNumeros(mega())
+  }, [])
 
-  function sorteador(){
-    setSortear(parseInt(Math.random()*100))
+  
+  function circulosComNumeros() {
+    return numeros.map((n) => {
+      return <Circulo key={n} numero={n} />
+    })
   }
 
   return (
-    <div style={estilo}>
-      <h1>Sorteio mega sena</h1>
-      <Circulo numero={sortear} />
-      {}
-      <input 
-        type="number" 
-        value={valor}
-        onChange={e => setValor(e.target.value)}
+    <div className={styles.container}>
+      <h1>Mega Sena</h1>
+      <div className={styles.item1}>
+        {circulosComNumeros()}
+      </div>
+      <div>
+        <input
+          type="number"
+          min={6}
+          max={20}
+          value={qtd}
+          onChange={e => setQtd(+e.target.value)}
         />
-      <button onClick={sorteador}>Sortear</button>
+        <button onClick={() => setNumeros(mega(qtd))}>
+          Gerar Aposta
+        </button>
+      </div>
     </div>
   )
 }
