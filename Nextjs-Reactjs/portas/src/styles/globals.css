@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: #444;
+  color:#fff;
+}
+
+:root{
+  --area-porta-altura: 310px;
+  --area-porta-largura: 200px;
+}
+
