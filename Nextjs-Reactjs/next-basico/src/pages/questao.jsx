@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 
-export default function questao(){
+export default function Questao(){
   const [questao, setQuestao] = useState(null)
 
   useEffect(() => {
@@ -8,7 +8,7 @@ export default function questao(){
     .then(res => res.json())
     .then(setQuestao)
   
-  })
+  },[])
 
   function renderizaRespostas(){
     if(questao){
