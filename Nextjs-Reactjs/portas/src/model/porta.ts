@@ -40,6 +40,6 @@ export default class PortaModel {
 
   abrir() {
     const aberta = true
-    return new PortaModel(this.getNumero, this.getTemPresente, this.getSelecionada, aberta)
+    return new PortaModel(this.getNumero, this.getTemPresente, this.getSelecionada, !this.getAberta)
   }
 }
