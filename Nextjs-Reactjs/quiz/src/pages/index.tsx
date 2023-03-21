@@ -3,7 +3,7 @@ import { useRouter } from 'next/router'
 import QuestaoModel from '@/model/questao'
 import Questionario from '@/components/Questionario'
 
-const BASE_URL = "https://questionario-smoky.vercel.app/api/"
+const BASE_URL = "https://questionario-smoky.vercel.app/api"
 
 export default function Home() {
   const router = useRouter()
