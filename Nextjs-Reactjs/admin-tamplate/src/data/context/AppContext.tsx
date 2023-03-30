@@ -3,11 +3,16 @@ import { createContext, useState } from "react";
 type Tema = "dark" | ""
 
 interface AppContextProps {
-  tema?: Tema
-  alternarTema?: () => void
+  tema: Tema
+  alternarTema: () => void
 }
 
-const AppContext = createContext<AppContextProps>({})
+const AppContext = createContext<AppContextProps>({
+  tema: "",
+  alternarTema: function (): void {
+    throw new Error("Function não implementada.");
+  }
+})
 
 export function AppProvider(props: any) {
 
