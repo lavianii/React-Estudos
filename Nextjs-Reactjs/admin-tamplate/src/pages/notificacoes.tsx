@@ -1,13 +1,11 @@
-import Layout from '@/components/template/Layout';
-import useAppData from '@/data/hook/useAppData';
+import Layout from '@/components/template/Layout'
 
 export default function Notificaoes() {
-    const { alternarTema } = useAppData()
 
     return (
-        <Layout titulo='Notificações' subtitulo='Aqui você ira gerenciar as suas notificações'>
- 
-            <button onClick={alternarTema}>alternarTema</button>
+        <Layout titulo='Notificações' 
+            subtitulo='Aqui você ira gerenciar as suas notificações'>
+            <h1>Notificação</h1>
         </Layout>
     )
 }
