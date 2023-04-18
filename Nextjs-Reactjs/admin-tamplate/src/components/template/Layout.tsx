@@ -1,5 +1,5 @@
 //Componente para estruturar as páginas
-import useAppData from "@/data/hook/useAppData"
+import useAppData from "../../data/hook/useAppData"
 import Cabecalho from "./Cabecalho"
 import Conteudo from "./Conteudo"
 import MenuLateral from "./MenuLateral"
